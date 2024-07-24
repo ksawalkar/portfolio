@@ -19,40 +19,77 @@
 
         .container {
             text-align: center;
+            max-width: 800px;
+            margin: auto;
         }
 
         .birthday-card {
             background: #fff;
             border-radius: 10px;
-            padding: 20px;
+            padding: 30px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             position: relative;
             overflow: hidden;
         }
 
         .title {
-            font-size: 2.5em;
+            font-size: 3em;
             color: #ff6f61;
             margin: 0;
             animation: fadeIn 2s ease-out;
         }
 
         .quote {
-            font-size: 1.2em;
+            font-size: 1.4em;
             color: #333;
-            margin-top: 10px;
+            margin-top: 15px;
             animation: fadeIn 2s ease-out 1s;
+        }
+
+        .wish-section {
+            margin-top: 20px;
+        }
+
+        .wish {
+            font-size: 1.2em;
+            color: #555;
+            margin: 10px 0;
+            animation: fadeIn 2s ease-out 2s;
+        }
+
+        .gallery {
+            margin-top: 30px;
+        }
+
+        .gallery img {
+            width: 150px;
+            height: 150px;
+            border-radius: 10px;
+            margin: 0 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.1);
+        }
+
+        .personal-message {
+            margin-top: 30px;
+            font-size: 1.2em;
+            color: #555;
+            animation: fadeIn 2s ease-out 3s;
         }
 
         .balloons {
             position: relative;
-            height: 200px;
-            margin-top: 20px;
+            height: 250px;
+            margin-top: 30px;
         }
 
         .balloon {
-            width: 60px;
-            height: 90px;
+            width: 70px;
+            height: 100px;
             background: #ff6f61;
             border-radius: 50% 50% 0 0;
             position: absolute;
@@ -61,20 +98,37 @@
         }
 
         .balloon1 {
-            left: 20%;
+            left: 15%;
             animation-delay: 0s;
         }
 
         .balloon2 {
-            left: 50%;
+            left: 45%;
             background: #ffb74d;
             animation-delay: 1s;
         }
 
         .balloon3 {
-            left: 80%;
+            left: 75%;
             background: #4db6ac;
             animation-delay: 2s;
+        }
+
+        .button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            color: #fff;
+            background-color: #ff6f61;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #e55b50;
         }
 
         @keyframes fadeIn {
@@ -84,7 +138,7 @@
 
         @keyframes float {
             0% { transform: translateY(0); }
-            50% { transform: translateY(-100px); }
+            50% { transform: translateY(-120px); }
             100% { transform: translateY(0); }
         }
     </style>
@@ -94,6 +148,20 @@
         <div class="birthday-card">
             <h1 class="title">Happy Birthday, Sister!</h1>
             <p class="quote">"Sister, you are my world. Your support, love, and friendship mean everything to me. Wishing you a birthday as special and wonderful as you are!"</p>
+            <div class="wish-section">
+                <p class="wish">May your day be filled with joy and laughter.</p>
+                <p class="wish">May all your dreams come true this year.</p>
+                <p class="wish">Here's to a year full of adventure and fun!</p>
+            </div>
+            <div class="gallery">
+                <img src="image1.jpg" alt="Happy Moments">
+                <img src="image2.jpg" alt="Fun Times">
+                <img src="image3.jpg" alt="Memorable Events">
+            </div>
+            <div class="personal-message">
+                <p>"Dear Sister, thank you for being my pillar of strength and a source of endless joy. May this year bring you all the happiness you deserve. I am so grateful for you!"</p>
+            </div>
+            <a href="#" class="button">Send Your Love</a>
             <div class="balloons">
                 <div class="balloon balloon1"></div>
                 <div class="balloon balloon2"></div>
