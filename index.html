@@ -3,92 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Happy Birthday Sister</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
+            font-family: 'Arial', sans-serif;
+            background-color: #f0e4d7;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
-        }
-        .container {
-            width: 80%;
-            margin: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
             overflow: hidden;
         }
-        header {
-            background: #333;
-            color: #fff;
-            padding-top: 30px;
-            min-height: 70px;
-            border-bottom: #77a6d5 3px solid;
-        }
-        header a {
-            color: #fff;
-            text-decoration: none;
-            text-transform: uppercase;
-            font-size: 16px;
-        }
-        header ul {
-            padding: 0;
-            list-style: none;
-        }
-        header li {
-            display: inline;
-            padding: 0 20px 0 20px;
-        }
-        .main {
-            padding: 15px;
-        }
-        .main h1 {
-            color: #333;
-        }
-        .main p {
-            color: #666;
-        }
-        footer {
-            background: #333;
-            color: #fff;
+
+        .container {
             text-align: center;
-            padding: 10px 0;
-            position: fixed;
+        }
+
+        .birthday-card {
+            background: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .title {
+            font-size: 2.5em;
+            color: #ff6f61;
+            margin: 0;
+            animation: fadeIn 2s ease-out;
+        }
+
+        .quote {
+            font-size: 1.2em;
+            color: #333;
+            margin-top: 10px;
+            animation: fadeIn 2s ease-out 1s;
+        }
+
+        .balloons {
+            position: relative;
+            height: 200px;
+            margin-top: 20px;
+        }
+
+        .balloon {
+            width: 60px;
+            height: 90px;
+            background: #ff6f61;
+            border-radius: 50% 50% 0 0;
+            position: absolute;
             bottom: 0;
-            width: 100%;
+            animation: float 4s ease-in-out infinite;
+        }
+
+        .balloon1 {
+            left: 20%;
+            animation-delay: 0s;
+        }
+
+        .balloon2 {
+            left: 50%;
+            background: #ffb74d;
+            animation-delay: 1s;
+        }
+
+        .balloon3 {
+            left: 80%;
+            background: #4db6ac;
+            animation-delay: 2s;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-100px); }
+            100% { transform: translateY(0); }
         }
     </style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>My Portfolio</h1>
-            <nav>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Projects</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </nav>
+    <div class="container">
+        <div class="birthday-card">
+            <h1 class="title">Happy Birthday, Sister!</h1>
+            <p class="quote">"Sister, you are my world. Your support, love, and friendship mean everything to me. Wishing you a birthday as special and wonderful as you are!"</p>
+            <div class="balloons">
+                <div class="balloon balloon1"></div>
+                <div class="balloon balloon2"></div>
+                <div class="balloon balloon3"></div>
+            </div>
         </div>
-    </header>
-    <div class="container main">
-        <h1>Welcome to My Portfolio</h1>
-        <p>Hello! I am Kanchan, 
-            <!-- a passionate [Your Profession]. Here you will find some of my favorite projects and learn more about me.</p> -->
-        <h2>About Me</h2>
-        <p>
-            <!-- Describe yourself here. What are your skills, experiences, and interests? -->
-        </p>
-        <h2>Projects</h2>
-        <!-- <p>Showcase your projects here. Include descriptions and links if possible.</p> -->
-        <h2>Contact</h2>
-        <p>If you would like to get in touch, feel free to reach out via email at email@example.com 
-            <!-- or connect with me on [Your Social Media]. -->
-        </p>
     </div>
-    <footer>
-        <p>My Portfolio &copy; 2024</p>
-    </footer>
 </body>
 </html>
