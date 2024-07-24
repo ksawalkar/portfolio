@@ -178,8 +178,7 @@
             height: 90px;
             background: red;
             left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%) rotate(-45deg);
+            transform: translateX(-50%) rotate(-45deg);
             animation: heartbeat 1.5s infinite;
         }
 
@@ -204,8 +203,8 @@
         }
 
         @keyframes heartbeat {
-            0%, 100% { transform: translate(-50%, -50%) rotate(-45deg) scale(1); }
-            50% { transform: translate(-50%, -50%) rotate(-45deg) scale(1.2); }
+            0%, 100% { transform: translateX(-50%) rotate(-45deg) scale(1); }
+            50% { transform: translateX(-50%) rotate(-45deg) scale(1.2); }
         }
 
         @media (max-width: 768px) {
@@ -270,7 +269,7 @@
                 <p class="wish">Here's to a year full of adventure and fun!</p>
             </div>
             <div class="personal-message">
-                <p>"Dear Di, thank you for being my pillar of strength and a source of endless joy. May this year bring you all the happiness you deserve. I am so grateful for you!! So one small poem for you"</p>
+                <p>"Dear Di, thank you for being my pillar of strength and a source of endless joy. May this year bring you all the happiness you deserve. I am so grateful for you! So one small poem for you"</p>
             </div>
             <div class="poem">
                 <p>माझा हात धरून <br>
@@ -284,7 +283,7 @@
     तुझ्या प्रत्येक स्वप्नाच्या मागे!! <br><br>
 
     तुला वाढदिवसाच्या हार्दिक शुभेच्छा <br>
-    तुझा दिवस जाऊ दे आनंदात! <br>
+    तुझा दिवस जाऊ दे आनंदात!<br>
     तुझ्या प्रत्येक क्षणात असो सुख-शांती <br>
     तुला मिळो सर्वस्वार्थी यशाची प्राप्ती!! <br>
                 </p>
@@ -295,7 +294,6 @@
                 <div class="balloon balloon2"></div>
                 <div class="balloon balloon3"></div>
             </div>
-            <div class="heart"></div>
         </div>
     </div>
 </body>
