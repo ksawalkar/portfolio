@@ -23,6 +23,7 @@
             margin: 20px auto;
             overflow-y: auto;
             height: 100%;
+            padding: 10px;
         }
 
         .birthday-card {
@@ -32,6 +33,7 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             position: relative;
             overflow: hidden;
+            animation: zoomIn 1s ease-out;
         }
 
         .title {
@@ -135,6 +137,7 @@
             border-radius: 5px;
             text-decoration: none;
             transition: background-color 0.3s ease;
+            animation: bounce 2s infinite;
         }
 
         .button:hover {
@@ -151,23 +154,125 @@
             50% { transform: translateY(-120px); }
             100% { transform: translateY(0); }
         }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-30px);
+            }
+            60% {
+                transform: translateY(-15px);
+            }
+        }
+
+        @keyframes zoomIn {
+            from { transform: scale(0); }
+            to { transform: scale(1); }
+        }
+
+        .heart {
+            position: absolute;
+            width: 100px;
+            height: 90px;
+            background: red;
+            left: 50%;
+            transform: translateX(-50%) rotate(-45deg);
+            animation: heartbeat 1.5s infinite;
+        }
+
+        .heart::before,
+        .heart::after {
+            content: "";
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background: red;
+            border-radius: 50%;
+        }
+
+        .heart::before {
+            top: -50px;
+            left: 0;
+        }
+
+        .heart::after {
+            left: 50px;
+            top: 0;
+        }
+
+        @keyframes heartbeat {
+            0%, 100% { transform: translateX(-50%) rotate(-45deg) scale(1); }
+            50% { transform: translateX(-50%) rotate(-45deg) scale(1.2); }
+        }
+
+        @media (max-width: 768px) {
+            .title {
+                font-size: 2em;
+            }
+
+            .quote, .wish, .personal-message, .poem {
+                font-size: 1em;
+            }
+
+            .gallery img {
+                width: 100px;
+                height: 100px;
+            }
+
+            .balloon {
+                width: 50px;
+                height: 75px;
+            }
+
+            .button {
+                font-size: 1em;
+                padding: 8px 16px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .title {
+                font-size: 1.5em;
+            }
+
+            .quote, .wish, .personal-message, .poem {
+                font-size: 0.8em;
+            }
+
+            .gallery img {
+                width: 80px;
+                height: 80px;
+            }
+
+            .balloon {
+                width: 40px;
+                height: 60px;
+            }
+
+            .button {
+                font-size: 0.8em;
+                padding: 6px 12px;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="birthday-card">
-            <h1 class="title">Happy Birthday, Sister!</h1>
-            <p class="quote">"Sister, you are my world. Your support, love, and friendship mean everything to me. Wishing you a birthday as special and wonderful as you are! LOVE YOU DI"</p>
+            <h1 class="title">Happy Birthday, Di!</h1>
+            <p class="quote">"Di, you are my world. Your support, love, and friendship mean everything to me. Wishing you a birthday as special and wonderful as you are! LOVE YOU DI"</p>
             <div class="wish-section">
                 <p class="wish">May your day be filled with joy and laughter.</p>
                 <p class="wish">May all your dreams come true this year.</p>
                 <p class="wish">Here's to a year full of adventure and fun!</p>
             </div>
             <div class="personal-message">
-                <p>"Dear Sister, thank you for being my pillar of strength and a source of endless joy. May this year bring you all the happiness you deserve. I am so grateful for you!"</p>
+                <p>"Dear Di, thank you for being my pillar of strength and a source of endless joy. May this year bring you all the happiness you deserve. I am so grateful for you!! So one small poem for you"</p>
             </div>
             <div class="poem">
-                <p>माझाा हात धरून <br>
+                <p>माझा हात धरून <br>
     शिकवले जीवनाचे पहिले धडे <br>
     तिच्या मार्गदर्शनात वाढले <br>
     तिच्या प्रेमात हसत खेळत <br><br>
@@ -189,6 +294,7 @@
                 <div class="balloon balloon2"></div>
                 <div class="balloon balloon3"></div>
             </div>
+            <div class="heart"></div>
         </div>
     </div>
 </body>
