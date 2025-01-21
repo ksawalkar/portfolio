@@ -179,7 +179,7 @@
             text-align: center;
             max-width: 400px;
             margin: auto;
-            margin-bottom: 430px;
+            margin-bottom: 462px;
         }
 
         .modal-content button {
@@ -231,7 +231,9 @@
     <!-- <section id="mainContent3" style="display: none;">
         <img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExcHF4NWF2azc3MTBxeDBpMmY0anF6aTUyZXl3MHc2NGNkN3ZpdmNsaCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Xw3pnKSKhcH7ozPozR/giphy.gif" alt="Funny Image" class="funny-image">
     </section> -->
-
+    <section id="specialPopup" style="display: none;" class="hero">
+        <h1>Happy Birthday, Prashant!</h1>
+    </section>
     <!-- Footer -->
     <footer id="mainContent4" style="display: none;">
         <p>Created with love & joy to celebrate 7+ years of friendship! &copy; 2025</p>
@@ -271,14 +273,17 @@
             <p>It's your special day, yeah!! 🎉</p>
         </div>
     </div>
-    <div id="specialPopup" class="modal">
+    <!-- <div id="specialPopup" class="modal">
         <div class="modal-content">
-            <!-- Add a Birthday Cake Icon -->
             <i class="fas fa-birthday-cake"></i>
             <h1>Happy Birthday, Prashant!</h1>
             <button id="specialPopupCloseButton">Close</button>
         </div>
-    </div>
+    </div> -->
+    <!-- <section id="specialPopup" style="display: none;" class="hero">
+        <h1>Happy Birthday, Prashant!</h1>
+        <p>Celebrating 7+ years of laughter, love, and friendship!</p>
+    </section> -->
 
     <!-- Second Popup -->
     <div id="secondModal" class="modal">
@@ -293,6 +298,12 @@
             <p>Do you want to see what we made? </p>
             <button id="yesButtonConfirm">Yes</button>
             <button id="noButtonConfirm">No</button>
+        </div>
+    </div>
+    <div id="myModal1" class="modal">
+        <div class="modal-content">
+            <p>You clicked YES, so here's a little extra gift for you: 🎁 Our memories will forever be etched in our heart. You've just unlocked an exclusive moment in our friendship! Thanks for being awesome! 😎</p>
+            <button class="close-btn" onclick="closeModal()">Close</button>
         </div>
     </div>
 <!-- Second Confirmation Modal -->
@@ -324,7 +335,7 @@
                 secondModal.style.display = 'none';
                 const thirdModal = document.getElementById("thirdModal");
                 thirdModal.style.display = 'flex';
-            }, 5000);
+            }, 6000);
 
             // Handling "Yes" button click to show all content
             document.getElementById("yesButtonConfirm").onclick = function() {
@@ -343,7 +354,7 @@
                 const hideContent = document.getElementById("hideContent");
                 hideContent.style.display = 'none'; // None the main content
                 document.body.style.overflowX = 'visible'; // Allow scrolling
-                alert("Here is the page you asked for!");
+                // alert("Here is the page you asked for!");
             };
 
             // Handling "No" button click to close popup
@@ -364,7 +375,7 @@
             if (buttonsClicked === 4) {
                 console.log("sdfghjkjhgfdsasdfghj", buttonsClicked)
                 const specialPopup = document.getElementById("specialPopup");
-                specialPopup.style.display = 'flex';
+                specialPopup.style.display = 'block';
         }
             if (memoryNumber === 1) {
                 
@@ -465,9 +476,10 @@
                 <p>The first time I truly got to know you, I realized how fun, caring, and genuine you are. Who would've thought that a simple meeting would lead to such a special and priceless bond? This unexpected friendship has turned out to be a source of support and joy throughout our lives. Our friendship is something that cannot be expressed in words, but it's something we experience in every moment we share. The laughter, the conversations, and the time spent together are what truly make our bond so precious.</p>
             `;
             secondConfirmModal.style.display = 'none';
+            document.getElementById("myModal1").style.display = "flex";
 
             // Add the additional message here after pressing "OK"
-            alert("You clicked YES, so here's a little extra gift for you: 🎁 Our memories will forever be etched in my heart. You've just unlocked an exclusive moment in our friendship! Thanks for being awesome! 😎");
+            // alert("You clicked YES, so here's a little extra gift for you: 🎁 Our memories will forever be etched in my heart. You've just unlocked an exclusive moment in our friendship! Thanks for being awesome! 😎");
         };
     
         document.getElementById("secondNoButton").onclick = function () {
@@ -497,6 +509,9 @@
     const specialPopup = document.getElementById("specialPopup");
     specialPopup.style.display = 'none'; // Close the special popup
 };
+function closeModal() {
+            document.getElementById("myModal1").style.display = "none";
+        }
     </script>
 </body>
 
